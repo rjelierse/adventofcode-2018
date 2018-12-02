@@ -5,6 +5,7 @@ import (
 	"flag"
 	"github.com/google/subcommands"
 	"github.com/rjelierse/adventofcode-2018/day01"
+	"github.com/rjelierse/adventofcode-2018/day02"
 )
 
 func main() {
@@ -13,6 +14,7 @@ func main() {
 	subcommands.Register(subcommands.HelpCommand(), "")
 
 	subcommands.Register(day01.Command(), "Puzzles")
+	subcommands.Register(day02.Command(), "Puzzles")
 
 	flag.Parse()
 
