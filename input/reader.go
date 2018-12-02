@@ -23,6 +23,15 @@ func ReadAsInts(path string) []int {
 	return ints
 }
 
+func ReadAsStrings(path string) []string {
+	data := read(path)
+	var strings []string
+	for _, item := range data {
+		strings = append(strings, string(item))
+	}
+	return strings
+}
+
 func read(path string) [][]byte {
 	data, err := ioutil.ReadFile(path)
 	if err != nil {
